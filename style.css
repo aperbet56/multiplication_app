@@ -1,0 +1,111 @@
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+/**** Style général de la page ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    background-color: #232946;
+    color: #fffffe;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.main__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.container {
+    background-color: #b8c1ec;
+    padding: 1.4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.score {
+    color: #232946;
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    font-size: 1.2rem;
+}
+
+.question {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    display: block;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 10px;
+    border: 4px solid #232946;
+    border-radius: 6px;
+    color: #242846;
+}
+
+input, .btn {
+    font-family: cursive;
+}
+  
+.input::placeholder {
+    color: #b6b6b6;
+}
+
+.result {
+    font-size: 1.2rem;
+}
+  
+.btn {
+    width: 100%;
+    display: block;
+    background-color: #eebbc3;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+  
+.btn:hover {
+    background-color: #232946;
+}
+  
+footer span {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
