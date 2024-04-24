@@ -29,7 +29,7 @@ const displayQuestion = () => {
   return (question.textContent = `Quel est le résultat de ${number1} multiplié par ${number2} ?`);
 };
 
-//Appel de la fonction displayQuestion
+// Appel de la fonction displayQuestion()
 displayQuestion();
 
 // Ecoute de l'événement "click" sur le bouton question suivante et appel de la fonction displayQuestion
@@ -49,7 +49,7 @@ submitBtn.addEventListener("click", (e) => {
     // Appel de la fonction updateLocalStorage()
     updateLocalStorage();
   } else {
-    // Dégrémentation du score
+    // Décrémentation du score
     score--;
     result.textContent = `Mauvaise réponse! La bonne réponse était ${correctAnswer}.`;
     result.style.color = "#f35d5d";
