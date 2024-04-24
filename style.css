@@ -104,7 +104,7 @@ input, .btn {
     color: #ffffff;
     padding: 10px;
     font-size: 1.5rem;
-    margin: 20px 0;
+    margin: 15px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     cursor: pointer;
@@ -131,4 +131,19 @@ footer span {
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/**** Responsive design ****/ 
+
+@media screen and (max-width: 768px) {
+    .question {
+        font-size: 1.5rem;
+    }
+    .buttons {
+        flex-direction: column;
+        gap: 0;
+    }
+    .btn {
+        width: 100%;
+    }
 }
