@@ -39,14 +39,14 @@ btnSubmit.addEventListener("click", (e) => {
   if (userAnswer === correctAnswer) {
     // Incrémentation du score
     score++;
-    result.textContent = "Bonne réponse";
+    result.textContent = "Bonne réponse !";
     result.style.color = "#4aa869";
     // Appel de la fonction updateLocalStorage()
     updateLocalStorage();
   } else {
     // Dégrémentation du score
     score--;
-    result.textContent = `Mauvaise réponse. La bonne réponse était ${correctAnswer}`;
+    result.textContent = `Mauvaise réponse! La bonne réponse était ${correctAnswer}.`;
     result.style.color = "#f35d5d";
     // Appel de la fonction updateLocalStorage()
     updateLocalStorage();
