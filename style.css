@@ -63,9 +63,15 @@ h1 {
     margin-bottom: 20px;
 }
 
+label {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
 .input {
     width: 100%;
     display: block;
+    margin-top: 8px;
     font-size: 1.6rem;
     text-align: center;
     padding: 10px;
