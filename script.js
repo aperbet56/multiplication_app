@@ -1,8 +1,9 @@
 // Récupération des différents éléments
 const question = document.querySelector(".question");
 const input = document.querySelector(".input");
-const btnSubmit = document.querySelector(".btn.submit");
-const btnNext = document.querySelector(".btn.next");
+const submitBtn = document.querySelector(".btn.submit");
+const nextBtn = document.querySelector(".btn.next");
+const resetBtn = document.querySelector(".btn.reset");
 const scorePlayer = document.querySelector(".score");
 const result = document.querySelector(".result");
 
@@ -28,10 +29,10 @@ const displayQuestion = () => {
 displayQuestion();
 
 // Ecoute de l'événement "click" sur le bouton question suivante et appel de la fonction displayQuestion
-btnNext.addEventListener("click", displayQuestion);
+nextBtn.addEventListener("click", displayQuestion);
 
 // Ecoute de l'événement "submit" sur le formulaire
-btnSubmit.addEventListener("click", (e) => {
+submitBtn.addEventListener("click", (e) => {
   // Suppression du comportement par défaut
   e.preventDefault();
   const userAnswer = +input.value;
@@ -58,3 +59,12 @@ const updateLocalStorage = () => {
   // La méthode JSON.stringify() convertit une valeur JavaScript en chaîne JSON.
   localStorage.setItem("score", JSON.stringify(score));
 };
+
+// Déclaration de la fonction resetScore qui va remettre à zéro le score
+const resetScore = () => {
+  // Vider le localStorage
+  localStorage.clear();
+};
+
+// Ecoute de l'événement "click" sur le bouton et appel de la fonction resetScore
+resetBtn.addEventListener("click", resetScore);
