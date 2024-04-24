@@ -1,7 +1,8 @@
 // Récupération des différents éléments
 const question = document.querySelector(".question");
 const input = document.querySelector(".input");
-const form = document.querySelector(".form");
+const btnSubmit = document.querySelector(".btn.submit");
+const btnNext = document.querySelector(".btn.next");
 const scorePlayer = document.querySelector(".score");
 const result = document.querySelector(".result");
 
@@ -18,10 +19,21 @@ if (!score) {
 }
 
 scorePlayer.textContent = `Votre score: ${score}`;
-question.textContent = `Quel est le résultat de ${number1} multiplié par ${number2} ?`;
+// Déclaration de la fonction displayQuestion qui permet d'afficher les questions
+const displayQuestion = () => {
+  return (question.textContent = `Quel est le résultat de ${number1} multiplié par ${number2} ?`);
+};
+
+//Appel de la fonction displayQuestion
+displayQuestion();
+
+// Ecoute de l'événement "click" sur le bouton question suivante et appel de la fonction displayQuestion
+btnNext.addEventListener("click", displayQuestion);
 
 // Ecoute de l'événement "submit" sur le formulaire
-form.addEventListener("submit", () => {
+btnSubmit.addEventListener("click", (e) => {
+  // Suppression du comportement par défaut
+  e.preventDefault();
   const userAnswer = +input.value;
   // Condition if...else
   if (userAnswer === correctAnswer) {
