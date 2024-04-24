@@ -78,6 +78,14 @@ label {
     border: 4px solid #232946;
     border-radius: 6px;
     color: #242846;
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 input, .btn {
@@ -138,6 +146,7 @@ footer span {
 @media screen and (max-width: 768px) {
     .question {
         font-size: 1.5rem;
+        line-height: 35px;
     }
     .buttons {
         flex-direction: column;
