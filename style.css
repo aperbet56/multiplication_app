@@ -90,10 +90,10 @@ label {
     border-radius: 6px;
     color: #242846;
     appearance: none;
-    -moz-appearance: textfield; /* Suppression des flèche de l'input number sur Mozilla */
+    -moz-appearance: textfield; /* Suppression des flèches de l'input number sur Mozilla */
 }
 
-/* Suppression des flèche de l'input number sur Chrome */
+/* Suppression des flèches de l'input number sur Chrome */
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button { 
 	-webkit-appearance: none;
