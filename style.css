@@ -21,7 +21,14 @@ body {
 }
 
 header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 25px 15px;
+}
+
+header {
+    flex-direction: column;
 }
 
 h1 {
@@ -138,12 +145,6 @@ input, .btn {
   
 .btn:hover {
     background-color: #232946;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
   
 footer span {
