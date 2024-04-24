@@ -13,13 +13,17 @@ const number2 = Math.ceil(Math.random() * 10);
 const correctAnswer = number1 * number2;
 console.log(correctAnswer);
 
-// La méthode JSON.parse() analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne.
+/**
+ * Initialisation du localStorage
+ * La méthode JSON.parse() analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne.
+ */
 let score = JSON.parse(localStorage.getItem("score"));
 if (!score) {
   score = 0;
 }
 
 scorePlayer.textContent = `Votre score: ${score}`;
+
 // Déclaration de la fonction displayQuestion qui permet d'afficher les questions
 const displayQuestion = () => {
   return (question.textContent = `Quel est le résultat de ${number1} multiplié par ${number2} ?`);
